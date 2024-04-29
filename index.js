@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+const stripe = require("stripe")("sk_test_51P9WyVSELV7PQhI25cdtSZCGYx6tjxz2sBb0scBqLtuSZJ3OuD9o2ysKi68AViYiqaBYF6UZqK1PX4QJcQOdNylj00HUnvt5w4");
 
 
 app.post("/check", (req, res) => {

@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-const stripe = require("stripe")("sk_test_51PAq6XSH80FvJf6bl4NYCj3UppSnUOXtL3egV47x2SbEcIa5xmXkwFQyPwCsaXLuiKXQq41ph4IiTCcAEo2zpZn300YUBT4n3b");
+const stripe = require("stripe")("sk_test_51P9WyVSELV7PQhI25cdtSZCGYx6tjxz2sBb0scBqLtuSZJ3OuD9o2ysKi68AViYiqaBYF6UZqK1PX4QJcQOdNylj00HUnvt5w4");
 
 
 app.post("/check", (req, res) => {

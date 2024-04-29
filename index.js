@@ -15,7 +15,7 @@ app.post("/check", (req, res) => {
     if (req.body.items[0].hash == Encrypt.encryptor(req.body.items[0].price)) {
       res.redirect(307, "/create-checkout-session");
     } else {
-      res.json({ url: `${process.env.SERVER_URL}/attack.html` });
+      res.json({ url: "https://ism-project-two.vercel.app/attack.html" });
     }
   } else {
     res.redirect(307, "/create-checkout-session");
@@ -43,8 +43,8 @@ app.post("/create-checkout-session", async (req, res) => {
         };
       }),
 
-      success_url: `${process.env.SERVER_URL}/success.html`,
-      cancel_url: `${process.env.SERVER_URL}/cancel.html`,
+      success_url: "https://ism-project-two.vercel.app/success.html",
+      cancel_url: "https://ism-project-two.vercel.app/cancel.html",
     });
 
     res.json({ url: session.url });
